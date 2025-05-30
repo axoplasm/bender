@@ -33,9 +33,7 @@ import json
 import time
 
 # Replace with your actual values
-CLIENT_ID = 'YOUR_CLIENT_ID'
-CLIENT_SECRET = 'YOUR_CLIENT_SECRET'
-REFRESH_TOKEN = 'YOUR_REFRESH_TOKEN'
+from _settings.secrets import CLIENT_ID, CLIENT_SECRET, REFRESH_TOKEN
 
 def get_access_token():
     response = requests.post(
