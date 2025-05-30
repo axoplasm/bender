@@ -41,8 +41,8 @@ def get_access_token():
         data={
             'client_id': CLIENT_ID,
             'client_secret': CLIENT_SECRET,
-            'grant_type': 'refresh_token',
-            'refresh_token': REFRESH_TOKEN
+            'grant_type': 'authorization_code',
+            'code': REFRESH_TOKEN
         }
     )
     response.raise_for_status()
@@ -71,11 +71,12 @@ def main():
     activities = get_activities(token)
     
     # Save to file
-    with open('strava_activities.json', 'w') as f:
+    with open('data/strava_activities.json', 'w') as f:
         json.dump(activities, f, indent=2)
     
     print(f"Downloaded {len(activities)} activities.")
 
 if __name__ == '__main__':
     main()
+
 
