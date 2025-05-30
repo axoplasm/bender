@@ -1,0 +1,21 @@
+# OS generated files #
+######################
+.DS_Store*
+Icon?
+._*
+
+# editor tmp files #
+####################
+*.un~
+*.swp
+*.swo
+
+# Python #
+##########
+*.pyc
+venv/
+
+# Data #
+########
+/data
+
